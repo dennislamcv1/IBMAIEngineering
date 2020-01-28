@@ -1,4 +1,4 @@
-# IBM-AI-Engineering
+# IBM AI Engineering
 Codes and Courses for Coursera IBM AI Engineering
 
 ### About this Professional Certificate
