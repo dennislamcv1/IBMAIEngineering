@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <center>
+      <img src="https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/Logos/organization_logo/organization_logo.png" width="300" alt="cognitiveclass.ai logo">
+    </center>
+    <p><strong>Effort: 15 mins</strong></p>
+    <h3>Objective:</h3>
+    <p>In this reading, you will be able to know how to do the final project.</p>
+    <ol start="0">
+      <li>
+        <p>Importing the Notebook in Watson Studio</p>
+      </li>
+      <li>
+        <p>Solve Classification Problem</p>
+      </li>
+    </ol>
+    <h3>How to do the final project?</h3>
+    <p><strong>A- Create an account in Watson Studio if you don't have one already (If you already have an account, jump to step B).</strong></p>
+    <ol>
+      <li>
+        <p>Browse into <a href="https://cloud.ibm.com/catalog/services/watson-studio?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">IBM Watson Studio</a></p>
+      </li>
+      <li>
+        <p>Click on <em>Start your free trial</em></p>
+      </li>
+      <li>
+        <p>Enter your email, and click <em>Next</em></p>
+      </li>
+      <li>
+        <p>Enter your Name, and choose a Password. Then click on <em>Create Account</em></p>
+      </li>
+      <li>
+        <p>Go to your email, and confirm your account.</p>
+      </li>
+      <li>
+        <p>Click on <em>Proceed</em></p>
+      </li>
+      <li>
+        <p>In <strong>Select Organization and Space</strong> form, leave everything as default, and click on _Continue+</p>
+      </li>
+      <li>
+        <p>It is done. Click on <em>Get started!</em></p>
+      </li>
+    </ol>
+    <p><strong>Notice 1:</strong> In case that you cannot sign-up for the IBM Cloud, when signing up for the IBM Cloud account specify your country/region as United States or Canada. This is a temporary workaround to access the free version of the service.</p>
+    <p><strong>Notice 2:</strong> If you already have an IBM Cloud account (perhaps you created it for another course) which you created by specifying your country as United States or Canada, and you reached to the usage limit, you have 2 options: 1) Create a new IBM Cloud account with a different email address and country as US or Canada. 2) Use the promo code that gives you 6 months of trial. The details about how to get the promo code is provided in the next section.</p>
+    <p>B- Sign in into Watson Studio and import your notebook</p>
+    <ol>
+      <li>
+        <p>Sign in into <a href="https://cloud.ibm.com/login?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">IBM Watson Studio</a></p>
+      </li>
+      <li>
+        <p>Click on <em>New Project</em></p>
+      </li>
+      <li>
+        <p>Select <em>Data Science</em> as type of project.</p>
+      </li>
+      <li>
+        <p>Give a name to your project, and a description for your reference, then setup your project as following and click <strong>Create</strong>.</p>
+      </li>
+    </ol>
+    <p><strong>Notice 1:</strong> because you are going to share this project with your peer for evaluation, please make sure you have unchecked <code>Restrict who can be a collaborator</code></p>
+    <p><strong>Notice 2:</strong> You have to create an IBM Object Storage, if you don't have any IBM Object Storage (you can use the free Lite plan)</p>
+    <ol start="5">
+      <li>
+        <p>From the top-right, Click on <em>Add to project</em>, and then select <em>Notebook'</em></p>
+      </li>
+      <li>
+        <p>In the <em>New notebook</em> form, click on <em>From URL</em>, and enter this Notebook URL: <a href="https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/ML0101EN-Proj-Loan-py-v1.ipynb?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork-20718538&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/ML0101EN-Proj-Loan-py-v1.ipynb</a></p>
+      </li>
+      <li>
+        <p>Give the notebook a proper name and description and click on <code>Create Notebook</code> to initialize the notebook</p>
+      </li>
+    </ol>
+    <p><strong>C. Complete the notebook</strong></p>
+    <ol>
+      <li>
+        <p>Start running the notebook</p>
+      </li>
+      <li>
+        <p>Complete the notebook based on the description in the notebook.</p>
+      </li>
+    </ol>
+    <p><strong>D. Share the notebook</strong></p>
+    <ol>
+      <li>
+        <p>Click on the share icon on the top-right side of your page</p>
+      </li>
+      <li>
+        <p>Activate the <code>Share with anyone who has the link</code></p>
+      </li>
+      <li>
+        <p>Select <code>All content excluding sensitive code cells</code></p>
+      </li>
+      <li>
+        <p>Copy the link from <code>Permalink to view notebook</code></p>
+      </li>
+      <li>
+        <p>Paste the link into the peer-evaluation form.</p>
+      </li>
+    </ol>
+    <p><strong>Notice:</strong> You can watch the next videos for more details.</p>
+    <p><strong>Notice:</strong> You can watch the next video for more info about Watson Studio, how to create a project and share it.</p>
+    <h2>Author(s)</h2>
+    <h4>Joseph Santarcangelo</h4>
+    <h4></h4>
+    <h2>Change log</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-10-05</td>
+          <td>2.0</td>
+          <td>Malika Singla</td>
+          <td>Migrated to GitLab</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
