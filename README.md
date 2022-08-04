@@ -1,22 +1,15 @@
-# IBM AI Engineering
-Codes and Courses for Coursera IBM AI Engineering
+# IBM AI Engineering Professional Certificate
 
-### About this Professional Certificate
+## About this Professional Certificate
 
-The rapid pace of innovation in Artificial Intelligence (AI) is creating enormous opportunity for transforming entire industries and our very 
-existence. After competing this comprehensive 6 course Professional Certificate, you will get a practical understanding of Machine Learning and Deep Learning. 
 
-You will master fundamental concepts of  Machine Learning and Deep Learning, including supervised and unsupervised learning. You will utilize popular Machine Learning and Deep Learning libraries such as SciPy, ScikitLearn, Keras, PyTorch, and Tensorflow applied to industry problems involving object recognition and Computer Vision, image and video processing, text analytics, Natural Language Processing, recommender systems, and other types of classifiers. 
+Artificial intelligence (AI) is revolutionizing entire industries, changing the way companies across sectors leverage data to make decisions. To stay competitive, organizations need qualified AI engineers who use cutting-edge methods like machine learning algorithms and deep learning neural networks to provide data driven actionable intelligence for their businesses. This 6-course Professional Certificate is designed to equip you with the tools you need to succeed in your career as an AI or ML engineer.  
 
-You will be able to scale Machine Learning on Big Data using Apache Spark. You will build, train, and deploy different types of Deep Architectures, including Convolutional Networks, Recurrent Networks, and Autoencoders. 
+You’ll master fundamental concepts of machine learning and deep learning, including supervised and unsupervised learning, using programming languages like Python. You’ll apply popular machine learning and deep learning libraries such as SciPy, ScikitLearn, Keras, PyTorch, and Tensorflow to industry problems involving object recognition, computer vision, image and video processing, text analytics, natural language processing (NLP), recommender systems, and other types of classifiers.
 
-By the end of this Professional Certificate, you will have completed several projects showcasing your proficiency in Machine Learning and Deep Learning, and become armed with skills for a career as an AI Engineer.
+Through hands-on projects, you’ll gain essential data science skills scaling machine learning algorithms on big data using Apache Spark. You’ll build, train, and deploy different types of deep architectures, including convolutional neural networks, recurrent networks, and autoencoders.
 
-### There are 6 Courses in this Professional Certificate
+In addition to earning a Professional Certificate from Coursera, you will also receive a digital badge from IBM recognizing your proficiency in AI engineering. 
+## Applied Learning Project
 
-* Machine Learning with Python
-* Machine Learning with Python
-* Machine Learning with Python
-* Machine Learning with Python
-* Machine Learning with Python
-* Machine Learning with Python
+Throughout the program, you will build a portfolio of projects demonstrating your mastery of course topics. The hands-on projects will give you a practical working knowledge of Machine Learning libraries and Deep Learning frameworks such as SciPy, ScikitLearn, Keras, PyTorch, and Tensorflow. You will also complete an in-depth Capstone Project, where you’ll apply your AI and Neural Network skills to a real-world challenge and demonstrate your ability to communicate project outcomes. 
