@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/default.min.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/IDSNlogo.png" width="200" height="200">
+    <h1>LAB: Classifying Images with IBM Watson (30 min)</h1>
+    <p>In this hands-on exercise you will utilize <em>IBM Watson Visual Recognition</em> (VR)</p>
+    <p><strong>Objective for Exercise:</strong></p>
+    <ul>
+      <li>How to create an IBM Cloud account</li>
+      <li>How to create a project in Watson Studio</li>
+      <li>How to work on built-in Visual Recognition models</li>
+      <li>How to upload and classify your images.</li>
+    </ul>
+    <p>Watson VR is a service that uses deep learning algorithms to identify objects, faces and other content in an image. Follow the steps below to complete this exercise.</p>
+    <p>NOTE: In order to complete this exercise you will be creating an IBM Cloud account and provisioning an instance for Watson Visual Recognition service. A credit card is NOT required to sign up for IBM Cloud Lite account and there is no charge associated in creating a Lite plan instance of the Watson VR service.</p>
+    <h2>STEP 1: CREATE AN IBM CLOUD ACCOUNT</h2>
+    <p>
+      Click on the link below to create an IBM cloud account:
+      <a href="https://cloud.ibm.com/registration?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">IBM Cloud</a>
+    </p>
+    <h2>Sign Up for IBM Watson Visual Recognition on IBM Cloud</h2>
+    <p>On the page to which you get redirected by clicking on the link above, enter your <strong>email address, first name, last name, country or region</strong>, and set your <strong>password</strong>.</p>
+    <p>NOTE: To get enhanced benefits, please sign up with you <strong>company email</strong> address rather than a free email ID like Gmail, Hotmail, etc.</p>
+    <p>If you would like IBM to contact you for any changes to services or new offerings, then check the box to accept the box to get notified by email. Then click on the Create Account button to create your IBM Cloud account.</p>
+    <ol>
+      <li>Go to: <a href="https://cloud.ibm.com/registration?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">https://cloud.ibm.com/registration</a> to create a free account on IBM Cloud.</li>
+    </ol>
+    <p>Note: If you already have an IBM Cloud account, Login by going to <a href="https://cloud.ibm.com/login?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">https://cloud.ibm.com/login</a> and skip ahead to Exercise 2.</p>
+    <ol start="2">
+      <li>Enter your company <strong>Email</strong> address and a strong <strong>Password</strong> and then click the <strong>Next</strong> button.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/1-email.jpg" alt="">
+    </p>
+    <h2>STEP 2: CONFIRM YOUR EMAIL ADDRESS</h2>
+    <ol start="3">
+      <li>An email is sent to the address that you signed up with to confirm your email address. Check your email and copy and paste <strong>Verification code</strong>. Then click <strong>Next</strong>.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/2-verify_email.jpg" alt="">
+    </p>
+    <ol start="4">
+      <li>Once your email is successfully verified, enter your <strong>First name</strong>, <strong>Last name</strong>, and <strong>Country</strong> and click <strong>Next</strong>.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/3-personal_info.jpg" alt="">
+    </p>
+    <ol start="5">
+      <li>After your personal information is accepted Click on <strong>Create account</strong> button.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/4-create_account.jpg" alt="">
+      It takes a few seconds to create and set up your account.
+    </p>
+    <ol start="6">
+      <li>You will see this page which confirms your account creation and allows you to login.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/account_setup_screen.png" alt="">
+    </p>
+    <h2>STEP 3: LOGIN TO YOUR ACCOUNT</h2>
+    <ol start="7">
+      <li>The username (which is your email address) is already populated. Enter your password and login.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/login_screen.png" alt="">
+    </p>
+    <ol start="8">
+      <li>Read carefully about the IBMid Privacy and click on proceed to acknowledge and login.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/account_privacy.png" alt="">
+    </p>
+    <ol start="9">
+      <li>Once you successfully login, you should see the dashboard. Now, please click on <strong>Create resource</strong> and proceed to the next exercise.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/dashboard.png" alt="">
+    </p>
+    <h2>STEP 4: CREATE A VISUAL RECOGNITION RESOURCE</h2>
+    <ol>
+      <li>To create a new <strong>Visual Recognition</strong> service, click on the link below:</li>
+    </ol>
+    <p><a href="https://cloud.ibm.com/catalog/services/visual-recognition?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">Visual Recognition</a></p>
+    <ol start="2">
+      <li>On the Visual Recognition page, , you will get to choose the Visual recognition service region. Click on the arrow to reveal the drop-down menu of regions. Make sure to select <strong>Dallas</strong> as region. verify that the Lite plan is selected, and then click Create.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/VR2.png" width="600">
+    <ol start="3">
+      <li>Your instance of Visual Recognition service should now be created.</li>
+    </ol>
+    <h2>STEP 5: CREATE WATSON STUDIO RESOURCE</h2>
+    <ol>
+      <li>
+        <p>In the IBM Cloud <strong>Catalog</strong> go to the Watson Studio listing - <a href="https://cloud.ibm.com/catalog/services/watson-studio?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">cloud.ibm.com/catalog/services/watson-studio</a></p>
+      </li>
+      <li>
+        <p>On the Watson Studio page, select DALLAS as the Region, verify that the <strong>Lite</strong> plan is selected, and then click <strong>Create</strong>.</p>
+      </li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/5-create_watson_studio_lite.jpg" alt="">
+    </p>
+    <ol start="3">
+      <li>Once the Watson Studio instance is successfully created, click on <strong>Get Started</strong>.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/6-watson_studio_get_started.jpg" alt="">
+    </p>
+    <ol start="4">
+      <li>Once you get started, the first time, your IBM Cloud Pak for Data core services is provisioned.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/provisioning.png" alt="">
+    </p>
+    <ol start="5">
+      <li>You will then see the list of cloud services to be initialized. Click on <strong>Continue</strong> to proceed.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/ready_to_launch.png" alt="">
+    </p>
+    <ol start="6">
+      <li>The cloud services will be initialized. This will take a few seconds. Once done, you will see a button which says <strong>Go to IBM Cloud Pak for Data</strong></li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/cloud_services_ready.png" alt="">
+    </p>
+    <ol start="7">
+      <li>You will see a welcome screen. You may choose to click on next and view the suggestions or close it and get started.</li>
+    </ol>
+    <p>
+      <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/flashscreen.png" alt="">
+    </p>
+    <h2>STEP 6: CREATE A PROJECT</h2>
+    <p>Once you land on the IBM Watson Studio main page, start by creating a project.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/6.1.png" width="600">
+    <p>Create a <strong>Visual Recognition project</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__15.png" width="600">
+    <h2>STEP 7: SETTING UP YOUR PROJECT</h2>
+    <p>Now let's fill in some project details and click <strong>Create</strong>. The IBM Cloud Object Storage, which provides you storage for your images, should be automatically created for you. If it is not then click on <strong>Add</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__16.png" width="600">
+    <p>Create the storage service with the lite plan.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/new_2.png" width="600">
+    <p>Go to <strong>Add to project</strong> and choose <strong>Visual Recognition Model</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/VRModel.PNG" width="600">
+    <p>After selecting it, you will see the following screen prompting you to add a Visual Recognition service to your project. Click on <strong>here</strong></p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/ProvisionVR.1.PNG" width="600">
+    <p>Now associate your instance of Visual Recognition service with your Watson Studio project by selecting the check box to the left of it and clicking on Associate service.</p>
+    <p>Note - Make sure all the loctaions are selected from the dropdown menu.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/new_7.png" width="600">
+    <h2>STEP 8: SELECTING BUILT-IN MODELS FOR WATSON VISUAL RECOGNITION</h2>
+    <p>After creating your project, by default, you will land on the page where you can create your own custom models and clasify images using pre-built models. Let's move ahead with <strong>Prebuilt Models</strong>.</p>
+    <h2>STEP 9: CHOOSE THE GENERAL MODEL.</h2>
+    <p>Now you can see all the built-in image classification models that IBM Watson provides! Let's try the <strong>General</strong> model. Please click on <strong>Test</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/new_8.png" width="600">
+    <h2>STEP 10: TRY OUT THE GENERAL MODEL</h2>
+    <p>To test the General model, click on <strong>Test</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__22.png" width="600">
+    <h2>STEP 11: UPLOAD YOUR IMAGES!</h2>
+    <p>Now you can upload any images you'd like by clicking on <strong>Browse</strong>.</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__23.png" width="600">
+    <h2>STEP 12: CHECK OUT THE RESULTS!</h2>
+    <p>Once you have uploaded your images, Watson Studio Visual Recognition will tell you what it thinks it found in your images! Beside each class of object (or color, age, etc.), it will also give you a confidence score (between 0 and 1) on how confident it thinks it found that particular object in your image (0 for lowest confidence and 1 for highest confidence).</p>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__24.png" width="600">
+    <h2>STEP 13: FILTER YOUR RESULTS</h2>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CV0101EN-SkillsNetwork/labs/Module2/images/Lab_6.1.1__25.png" width="600">
+    <h2>STEP 14: SHARE YOUR RESULTS!</h2>
+    <p>Follow us on Twitter and send us some of your funniest and most interesting results you found with IBM Watson Visual Recognition!</p>
+    <h2>Author(s)</h2>
+    <p><a href="https://www.linkedin.com/in/nayefaboutayoun?utm_medium=Exinfluencer&#x26;utm_source=Exinfluencer&#x26;utm_content=000026UJ&#x26;utm_term=10006555&#x26;utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENSkillsNetwork19816089-2022-01-01" target="_blank" rel="external">Nayef Abou Tayoun</a></p>
+    <h2>Changelog</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-08-27</td>
+          <td>2.0</td>
+          <td>Shubham</td>
+          <td>Migrated Lab to Markdown and added to course repo in GitLab</td>
+        </tr>
+        <tr>
+          <td>2020-11-11</td>
+          <td>3.0</td>
+          <td>Srishti</td>
+          <td>Updated login screen and initial set up screens</td>
+        </tr>
+        <tr>
+          <td>2020-11-25</td>
+          <td>3.1</td>
+          <td>Shubham</td>
+          <td>Updated lab with new IBM Cloud screenshots</td>
+        </tr>
+        <tr>
+          <td>2021-01-05</td>
+          <td>3.2</td>
+          <td>Srishti</td>
+          <td>Updated lab with VR service creation link</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.43989f87.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  </body>
+</html>
